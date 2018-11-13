@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegiaosTable extends Migration
+class CreateRegiaoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateRegiaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('regiaos', function (Blueprint $table) {
+        Schema::create('regiao', function (Blueprint $table) {
             $table->increments('id');
             $table->String('localizacao');
             $table->String('codigo_postal');
             $table->String('descricao');
             $table->timestamps();
+
         });
     }
 
@@ -29,6 +30,6 @@ class CreateRegiaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regiaos');
+        Schema::dropIfExists('regiao');
     }
 }

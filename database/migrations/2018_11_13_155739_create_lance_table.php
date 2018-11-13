@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriasTable extends Migration
+class CreateLanceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreateCategoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('lance', function (Blueprint $table) {
+            
             $table->increments('id');
-            $table->String('descricao');
+            $table->integer('valor');
+            $table->string('hora');
+            $table->date('data');
+            $table->integer('utilizador_id')->unsigned();
+            $table->foreign('utilizador_id')->references('id')->on('utilizador');
             $table->timestamps();
+
         });
     }
 
@@ -27,6 +33,6 @@ class CreateCategoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('lance');
     }
 }

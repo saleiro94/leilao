@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLancesTable extends Migration
+class CreateTipoUtilizadorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateLancesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lances', function (Blueprint $table) {
+        Schema::create('tipo_utilizador', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('valor');
-            $table->string('hora');
-            $table->date('data');
-            $table->integer('id_utilizador');
+            $table->String('descricao');
             $table->timestamps();
+
         });
     }
 
@@ -30,6 +28,6 @@ class CreateLancesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lances');
+        Schema::dropIfExists('tipo_utilizador');
     }
 }

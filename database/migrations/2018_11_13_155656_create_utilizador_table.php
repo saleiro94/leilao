@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtesaosTable extends Migration
+class CreateUtilizadorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateArtesaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('artesaos', function (Blueprint $table) {
+        Schema::create('utilizador', function (Blueprint $table) {
             $table->increments('id');
             $table->String('nome');
-            $table->integer('idade');
-            $table->String('email');
-            $table->integer('id_categoria');
-            $table->integer('id_regiao');
+            $table->integer('contacto_id')->unsigned();
+            $table->integer('tipo_id')->unsigned();
+            $table->foreign('contacto_id')->references('id')->on('contactos');
+            $table->foreign('tipo_id')->references('id')->on('tipo_utilizador');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateArtesaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artesaos');
+        Schema::dropIfExists('utilizador');
     }
 }

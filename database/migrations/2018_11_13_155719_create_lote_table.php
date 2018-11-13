@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLotesTable extends Migration
+class CreateLoteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,19 @@ class CreateLotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lotes', function (Blueprint $table) {
+        Schema::create('lote', function (Blueprint $table) {
+           
             $table->increments('id');
-            $table->integer('id_peca');
-            $table->integer('id_estado');
             $table->date('data_inicio');
             $table->dateTime('hora_inicio');
             $table->dateTime('hora_fim');
             $table->date('data_fim');
+            $table->integer('peca_id')->unsigned();
+            $table->integer('estado_id')->unsigned();
+            $table->foreign('peca_id')->references('id')->on('peca');
+            $table->foreign('estado_id')->references('id')->on('estado');
             $table->timestamps();
+
         });
     }
 
@@ -32,6 +36,6 @@ class CreateLotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lotes');
+        Schema::dropIfExists('lote');
     }
 }
