@@ -11,6 +11,13 @@ class lances extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('lance')->insert([
+            
+            'valor' => str_random(10),
+            'hora' => str_random(10),
+            'data' => str_random(10),
+            
+        
+        ]);
     }
 }

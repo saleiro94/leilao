@@ -14,7 +14,7 @@ class categorias extends Seeder
         DB::table('categoria')->insert([
             
             'descricao' => str_random(10),
-            
+        
         ]);
     }
 }

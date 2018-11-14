@@ -11,6 +11,9 @@ class estados extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('estado')->insert([
+            
+            'descricao' => str_random(10),
+        ]);
     }
 }
