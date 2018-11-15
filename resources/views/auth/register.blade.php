@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="tipo_id" class="col-md-4 col-form-label text-md-right">Tipo User</label>
+
+                            <div class="col-md-6">
+                                <input id="tipo_id" type="text" class="form-control" name="tipo_id" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="contacto_id" class="col-md-4 col-form-label text-md-right">Contacto</label>
+
+                            <div class="col-md-6">
+                                <input id="contacto_id" type="text" class="form-control" name="contacto_id" required>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

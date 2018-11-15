@@ -19,8 +19,8 @@ class CreateLanceTable extends Migration
             $table->integer('valor');
             $table->string('hora');
             $table->date('data');
-            $table->integer('utilizador_id')->unsigned();
-            $table->foreign('utilizador_id')->references('id')->on('utilizador');
+            $table->integer('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
 
         });
