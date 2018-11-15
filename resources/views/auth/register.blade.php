@@ -62,13 +62,15 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="tipo_id" class="col-md-4 col-form-label text-md-right">Tipo User</label>
-
-                            <div class="col-md-6">
-                                <input id="tipo_id" type="text" class="form-control" name="tipo_id" required>
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="tipo_id" id="tipo_id">
+                                    <label class="form-check-label" for="tipo_id">
+                                        {{ __('Utilizador para vendedor') }}
+                                    </label>
+                                </div>
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="contacto_id" class="col-md-4 col-form-label text-md-right">Contacto</label>
 
