@@ -11,9 +11,15 @@ class lotes extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => str_random(10),
-            'email' => str_random(10).'@gmail.com',
-            'password' => bcrypt('secret'), ]);
+        DB::table('lote')->insert([
+            'data_inicio' => new DateTime,
+            'hora_inicio' =>new DateTime,
+            'hora_fim' => new DateTime,
+           'data_fim' => new DateTime,
+           'peca_id'=>1,
+            'estado_id'=>1
+        ]);
+
+        
     }
 }

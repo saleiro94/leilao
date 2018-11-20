@@ -11,7 +11,7 @@ class estado_de_conservados extends Seeder
      */
     public function run()
     {
-        DB::table('estado_conservacao')->insert([
+        DB::table('estado_conservacaos')->insert([
             
             'descricao' => str_random(10),
         ]);

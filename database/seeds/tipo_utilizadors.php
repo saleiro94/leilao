@@ -11,6 +11,10 @@ class tipo_utilizadors extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('tipo_utilizador')->insert([
+            'descricao' => str_random(10)
+        ]);
+        
+      
     }
 }

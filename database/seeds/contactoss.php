@@ -13,7 +13,7 @@ class contactoss extends Seeder
     {
         DB::table('contactos')->insert([
             
-            'n_telefone' => str_random(10),
+            'n_telefone' => 1234,
             'morada' => str_random(10),
             'email' => str_random(10),
             
