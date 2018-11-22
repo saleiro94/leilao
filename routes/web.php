@@ -15,9 +15,10 @@
 
 route::get('/','PagesController@index');
 
-route::get('/novos','PagesController@novos');
+route::get('/novosLeiloes','PagesController@novos');
 
-route::get('/services','PagesController@services');
+route::get('/novosContactos','PagesController@novosContactos');
+Route::resource('/novosContactos', 'ContactosController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

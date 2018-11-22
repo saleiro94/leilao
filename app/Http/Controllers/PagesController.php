@@ -13,14 +13,13 @@ class PagesController extends Controller
     
     public function novos(){
         $title = "Novos";
-        return view('pages.about')->with('title',$title);
+        return view('pages.novosLeiloes')->with('title',$title);
     }
   
-    public function services(){
+    public function novosContactos(){
         $data=array(
-            'title'=>'Services',
-            'services'=>['Web','Proga','SEo']
+            'title'=>'Adicionar Contactos',
         );
-        return view('pages.services')->with($data);
+        return view('pages.novosContactos')->with($data);
     }
 }
