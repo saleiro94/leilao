@@ -23,7 +23,7 @@ class PeçaController extends Controller
      */
     public function create()
     {
-        //
+    
     }
 
     /**
@@ -60,6 +60,16 @@ class PeçaController extends Controller
                 $fileNameToStore = 'noimage.jpg';
             }
 
+            $peca= new Peca;
+            $peca->nome=$request->input('nome');
+            $peca->descricao=$request->input('descricao');
+            $peca->peso_medio=$request->input('peso_medio');
+            $peca->img->$fileNameToStore;
+            $peca->estado_id->estado()->id;
+            $peca->users_id->auth()->user()->id;
+            $peca->artesao_id->artesao()->id;
+            $peca->valor->$request->input('valor');
+            
     }
 
     /**

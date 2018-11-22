@@ -21,3 +21,5 @@ route::get('/services','PagesController@services');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+route::get('/adicionarPeça', 'PeçaController@peça');
