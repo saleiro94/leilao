@@ -18,6 +18,8 @@ class pecas extends Seeder
             'estado_id'=> 1,
             'users_id'=> 1,
             'artesao_id'=>1,
+            'img'=> str_random(10),
+            'valor'=>1,
         ]);
         
     }

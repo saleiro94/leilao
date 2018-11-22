@@ -19,6 +19,8 @@ class CreatePecaTable extends Migration
             $table->String('nome');
             $table->String('descricao');
             $table->float('peso_medio');
+            $table->integer('valor');
+            $table->string('img');
             $table->integer('estado_id')->unsigned();
             $table->integer('users_id')->unsigned();
             $table->integer('artesao_id')->unsigned();

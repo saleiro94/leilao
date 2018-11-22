@@ -1,0 +1,33 @@
+Leilao
+
+//ctrl + enter para criar novo box
+//alt+ d para tarefa feita
+//alt+ c para cancelar  
+Marcos:
+    ☐ Contactos
+        ☐ conttroller
+        ☐ pagina
+        ☐ 
+    ☐ pagina principal
+        ☐ controller
+        ☐ pagina
+        ☐ 
+    ☐ pagina listar todas as peças
+        ☐ controller
+        ☐ pagina
+        ☐ 
+Antonio:
+    ☐ Adicionar peças;
+        ✔ controller @done(18-11-22 11:05)
+        ☐ paginas
+        ☐ 
+
+    ☐ listar peças
+        ☐ controller
+        ☐ paginas
+        ☐
+    
+    ☐ peça individual
+        ☐ controller
+        ☐ paginas
+        ☐ 
