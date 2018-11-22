@@ -11,8 +11,8 @@ class PagesController extends Controller
         return view('pages.index', compact('title'));
     }
     
-    public function about(){
-        $title = "About-UUUS";
+    public function novos(){
+        $title = "Novos";
         return view('pages.about')->with('title',$title);
     }
   

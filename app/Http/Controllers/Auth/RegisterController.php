@@ -52,7 +52,6 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:1|confirmed',            
-            'contacto_id' => 'required|int|max:11',
         ]);
     }
 
@@ -64,7 +63,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
+        $contacto = 1;
         $tipo;
         if(!isset($data ['tipo_id'])){
             $tipo = 1;
@@ -78,7 +77,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'tipo_id' => $tipo,
-            'contacto_id' => $data['contacto_id'],
+            'contacto_id' => $contacto,
         ]);
     }
 }
