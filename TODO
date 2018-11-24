@@ -4,14 +4,21 @@ Leilao
 //alt+ d para tarefa feita
 //alt+ c para cancelar  
 Marcos:
+    NavBar:
+        ☐ add Peça
     ☐ Contactos
         ☐ conttroller
+            ✔ create @done(18-11-22 11:32)
+            ☐ update
+            ☐ delete
+            ☐ show 
         ☐ pagina
-        ☐ 
+        
     ☐ pagina principal
         ☐ controller
         ☐ pagina
         ☐ 
+        
     ☐ pagina listar todas as peças
         ☐ controller
         ☐ pagina

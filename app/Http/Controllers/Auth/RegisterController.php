@@ -80,4 +80,34 @@ class RegisterController extends Controller
             'contacto_id' => $contacto,
         ]);
     }
+       /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function edit($id)
+    {
+        $user = User::find($id);
+        // Check for correct user
+        if(auth()->user()->id !==$user->user_id){
+            return redirect('/posts')->with('error', 'Unauthorized Page');
+        }
+        return view('posts.edit')->with('post', $post);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        // Create Post
+        $user = User::find($id);
+        $user->contactos_id = $request->input('id');
+        $user->save();
+        return redirect('/posts')->with('success', 'Post Updated');
+    }
+
 }

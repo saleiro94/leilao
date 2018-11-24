@@ -47,6 +47,11 @@ class ContactosController extends Controller
         $contacto->morada = $request->input('morada');
         $contacto->email = $request->input('email');
         $contacto->save();
+        // Create Post
+        $userId = Auth::id();
+        $user = User::find($userId);
+        $user->contactos_id = $contacto;
+        $user->save();
         return redirect('/home')->with('success', 'Post Created');
     }
 
