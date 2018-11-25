@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Peca;
+use DB;
 class PeçaController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class PeçaController extends Controller
      */
     public function index()
     {
-       
+        return view('pages.peca_crud.create');
+
     }
 
     /**
@@ -69,7 +71,8 @@ class PeçaController extends Controller
             $peca->users_id->auth()->user()->id;
             $peca->artesao_id->artesao()->id;
             $peca->valor->$request->input('valor');
-            
+            $peca->save();
+            return redirect('/home')->with('success', 'Post Created');
     }
 
     /**

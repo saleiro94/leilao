@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create Post</h1>
+    <h1>Adicione o seu Contacto</h1>
     {!! Form::open(['action' => 'ContactosController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
             {{Form::label('n_telefone', 'Numero de Telefone')}}
