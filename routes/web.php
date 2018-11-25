@@ -23,6 +23,3 @@ Route::get('/adicionarpeca','PagesController@novasPecas');
 Route::resource('/novosContactos', 'ContactosController');
 Route::resource('/adicionarpeca', 'PecaController');
 Auth::routes();
-
-
-
