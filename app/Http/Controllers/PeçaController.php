@@ -46,7 +46,7 @@ class PeçaController extends Controller
             'artesao_id'=>'required',
             'valor'=>'required',
             ]);
-        
+            
             if($request->hasFile('img')){
                 // Get filename with the extension
                 $filenameWithExt = $request->file('img')->getClientOriginalName();
@@ -62,17 +62,20 @@ class PeçaController extends Controller
                 $fileNameToStore = 'noimage.jpg';
             }
 
+            
+
             $peca= new Peca;
             $peca->nome=$request->input('nome');
             $peca->descricao=$request->input('descricao');
             $peca->peso_medio=$request->input('peso_medio');
             $peca->img->$fileNameToStore;
-            $peca->estado_id->estado()->id;
-            $peca->users_id->auth()->user()->id;
-            $peca->artesao_id->artesao()->id;
+            $peca->estado_id=$request->input('estado_id');
+            $peca->users_id=$request->input('users_id');
+            $peca->artesao_id=$request->input('artesao_id');
             $peca->valor->$request->input('valor');
+            
             $peca->save();
-            return redirect('/home')->with('success', 'Post Created');
+            
     }
 
     /**

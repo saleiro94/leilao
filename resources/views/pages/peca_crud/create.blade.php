@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{Form::label('peso_medio', 'Peso Médio')}}
-            {{Form::text('peso_medio', '', ['class' => 'form-control', 'placeholder' => 'Peso Medio'])}}
+            {{Form::text('peso_medio', '', ['class' => 'form-control', 'placeholder' => 'Peso Médio'])}}
         </div>
         <div class="form-group">
             {{Form::file('img')}}
@@ -24,13 +24,13 @@
         </div>
         <div class="form-group">
             {{Form::label('artesao_id', 'Artesão')}}
-            {{Form::text('artesao_id', '', ['class' => 'form-control', 'placeholder' => 'Artesao'])}}
+            {{Form::text('artesao_id', '', ['class' => 'form-control', 'placeholder' => 'Artesão'])}}
         </div>
         <div class="form-group">
             {{Form::label('valor', 'Valor')}}
             {{Form::text('valor', '', ['class' => 'form-control', 'placeholder' => 'Valor'])}}
         </div>
         
-        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+        {{Form::submit('Inserir', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection
