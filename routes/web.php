@@ -23,6 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/adicionarpeça', 'PeçaController@create');
-Route::get('/adicionarpeça', 'PeçaController@index');
+Route::get('/adicionarpeça', 'PeçaController@create');
+
+Route::post('/adicionarpeça', 'PeçaController@store');
+
 Route::resource('/adicionarpeça', 'PeçaController');
