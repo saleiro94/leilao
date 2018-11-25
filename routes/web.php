@@ -13,14 +13,15 @@
 
 
 
-route::get('/','PagesController@index');
+Route::get('/','PagesController@index');
 
-route::get('/novosLeiloes','PagesController@novos');
+Route::get('/novosLeiloes','PagesController@novos');
 
-route::get('/novosContactos','PagesController@novosContactos');
+Route::get('/novosContactos','PagesController@novosContactos');
 Route::resource('/novosContactos', 'ContactosController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-route::get('/adicionarPeça', 'PeçaController@Peça');
+Route::get('/adicionarpeça', 'PeçaController@create');
+Route::resource('/adicionarpeça', 'PeçaController');
