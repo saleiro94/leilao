@@ -16,9 +16,6 @@
             {{Form::text('peso_medio', '', ['class' => 'form-control', 'placeholder' => 'Peso Médio'])}}
         </div>
         <div class="form-group">
-            {{Form::file('img')}}
-        </div>
-        <div class="form-group">
             {{Form::label('estado_id', 'Estado')}}
             {{Form::text('estado_id', '', ['class' => 'form-control', 'placeholder' => 'Estado'])}}
         </div>

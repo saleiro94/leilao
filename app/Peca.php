@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
 class Peca extends Model
@@ -9,7 +9,7 @@ class Peca extends Model
     use Notifiable;
 
     protected $fillable = [
-        'nome', 'descricao', 'peso_medio', 'img', 'estado_id','users_id','artesao_id','valor'
+        'nome', 'descricao', 'peso_medio', 'estado_id','artesao_id','valor'
     ];
     
     public function user(){

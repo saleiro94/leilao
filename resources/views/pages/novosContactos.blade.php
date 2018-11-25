@@ -9,11 +9,11 @@
         </div>
         <div class="form-group">
             {{Form::label('morada', 'Morada')}}
-            {{Form::textarea('morada', '', ['class' => 'form-control', 'placeholder' => 'Morada'])}}
+            {{Form::text('morada', '', ['class' => 'form-control', 'placeholder' => 'Morada'])}}
         </div>
         <div class="form-group">
                 {{Form::label('email', 'Email')}}
-                {{Form::textarea('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}
+                {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}
         </div>
         {{Form::submit('Adicionar', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}

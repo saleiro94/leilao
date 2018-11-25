@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Contactos;
+use App\User;
 
 class ContactosController extends Controller
 {
@@ -46,12 +47,13 @@ class ContactosController extends Controller
         $contacto->n_telefone = $request->input('n_telefone');
         $contacto->morada = $request->input('morada');
         $contacto->email = $request->input('email');
-        $contacto->save();
+        if($contacto->save()){
         // Create Post
         $userId = Auth::id();
         $user = User::find($userId);
-        $user->contactos_id = $contacto;
+        $user->contacto_id = $contacto->id;
         $user->save();
+        }
         return redirect('/home')->with('success', 'Post Created');
     }
 
