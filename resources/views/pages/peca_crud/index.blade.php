@@ -11,7 +11,12 @@
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <h3><a href="/novosLeiloes/{{$peca->id}}">{{$peca->nome}}</a></h3>
-                        
+                        <h3>Descrição:{{$peca->descricao}}</h3>
+                        <h3>Peso médio:{{$peca->peso_medio}}</h3>
+                        <h3>Valor:{{$peca->valor}}</h3>
+                        <h3>Estado:{{$peca->estado_id}}</h3>
+                        <h3>User:{{$peca->users_id}}</h3>
+                        <h3>Artesão:{{$peca->artesao_id}}</h3>
                     </div>
                 </div>
             </div>
