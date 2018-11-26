@@ -26,11 +26,11 @@ Marcos:
 Antonio:
     ☐ Adicionar peças;
         ✔ controller @done(18-11-22 11:05)
-        ☐ paginas
-        ☐ 
+        ✔ paginas @done(18-11-26 13:24)
+        ✔ regista na base de dados com imagem @done(18-11-26 13:25)
 
     ☐ listar peças
-        ☐ controller
+        ✔ controller @done(18-11-26 13:25)
         ☐ paginas
         ☐
     

@@ -14,7 +14,7 @@
 
 //Routes GET
 Route::get('/','PagesController@index');
-Route::get('/novosLeiloes','PagesController@novos');
+Route::get('/novosLeiloes','PecaController@index');
 Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adicionarpeca/create','PecaController@create');
@@ -22,4 +22,5 @@ Route::get('/adicionarpeca/create','PecaController@create');
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
 Route::resource('/novosContactos', 'ContactosController');
 Route::resource('/adicionarpeca', 'PecaController');
+Route::resource('/novosLeiloes','PecaController');
 Auth::routes();

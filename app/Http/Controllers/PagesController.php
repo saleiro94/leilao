@@ -11,10 +11,7 @@ class PagesController extends Controller
         return view('pages.index', compact('title'));
     }
     
-    public function novos(){
-        $title = "Novos";
-        return view('pages.novosLeiloes')->with('title',$title);
-    }
+    
   
     public function novosContactos(){
         $data=array(
@@ -22,10 +19,5 @@ class PagesController extends Controller
         );
         return view('pages.novosContactos')->with($data);
     }
-    public function novasPecas(){
-        $data=array(
-            'title'=>'Adicionar Pecas',
-        );
-        return view('pages.novasPecas')->with($data);
-    }
+   
 }

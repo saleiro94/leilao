@@ -17,9 +17,9 @@ class PecaController extends Controller
      */
     public function index()
     {
-        //$pecas =Peca::all();
-       // return view('pages.indexPecas')->with('pecas',$pecas);
-       //return view('pages.novasPecas');
+        $pecas =Peca::all();
+        return view('pages.peca_crud.index')->with('pecas',$pecas);
+      
     }
 
     /**
@@ -29,7 +29,7 @@ class PecaController extends Controller
      */
     public function create()
     { 
-        return view('pages.novasPecas');
+        return view('pages.peca_crud.create');
     }
 
     /**
