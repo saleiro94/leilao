@@ -38,3 +38,9 @@ Antonio:
         ☐ controller
         ☐ paginas
         ☐ 
+
+
+
+
+        (`nome`, `descricao`, `peso_medio`, `valor`, `img`, `estado_id`, `users_id`, `artesao_id`, `updated_at`, `created_at`) values
+         (qwe,      qwe,            1,         1 , primeira aula_1543228469.png, 1, 2, 1, 2018-11-26 10:34:29, 2018-11-26 10:34:29)) 

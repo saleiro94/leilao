@@ -17,10 +17,9 @@ class PecaController extends Controller
      */
     public function index()
     {
-        $peca = Peca::orderBy('created_at','desc')->paginate(10);
-        return view('pages.novasPecas')->with('peças', $peca);
-        
-
+        //$pecas =Peca::all();
+       // return view('pages.indexPecas')->with('pecas',$pecas);
+       //return view('pages.novasPecas');
     }
 
     /**
@@ -29,7 +28,7 @@ class PecaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    { 
         return view('pages.novasPecas');
     }
 
@@ -93,7 +92,7 @@ class PecaController extends Controller
      */
     public function show($id)
     {
-        //
+        return Peca::find($id);
     }
 
     /**

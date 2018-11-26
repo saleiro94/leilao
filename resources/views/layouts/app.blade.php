@@ -58,7 +58,7 @@
                                     <a class="dropdown-item" href="/novosContactos">
                                      {{ __('Novos Contactos') }}
                                   </a>
-                                  <a class="dropdown-item" href="/adicionarpeca">
+                                  <a class="dropdown-item" href="/adicionarpeca/create">
                                     {{ __('Adicionar Peças') }}
                                  </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
