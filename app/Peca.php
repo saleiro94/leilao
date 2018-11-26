@@ -6,13 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Peca extends Model
 {
+    protected $table = 'peca';
     use Notifiable;
 
     protected $fillable = [
-        'nome', 'descricao', 'peso_medio', 'estado_id','artesao_id','valor'
+        'nome', 'descricao', 'peso_medio','valor','img','estado_id','users_id','artesao_id'
     ];
     
-    public function user(){
-        return $this->belongsTo('App\User');
-    }
+   
 }

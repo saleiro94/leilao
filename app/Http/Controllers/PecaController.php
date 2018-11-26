@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Peca;
+use DB;
 
 class PecaController extends Controller
 {
@@ -16,7 +17,9 @@ class PecaController extends Controller
      */
     public function index()
     {
-        return view('pages.novasPecas');
+        $peca = Peca::orderBy('created_at','desc')->paginate(10);
+        return view('pages.novasPecas')->with('peças', $peca);
+        
 
     }
 
@@ -27,7 +30,7 @@ class PecaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.novasPecas');
     }
 
     /**
@@ -45,11 +48,13 @@ class PecaController extends Controller
             'nome' => 'required',
             'descricao' => 'required',
             'peso_medio' => 'required',
+            'valor' => 'required',
+            'img'=>'image|nullable|max:3000',
             'estado_id' => 'required',            
             'artesao_id' => 'required',
-            'valor' => 'required',
+            
             ]);
-            /*
+            
             if($request->hasFile('img')){
                 // Get filename with the extension
                 $filenameWithExt = $request->file('img')->getClientOriginalName();
@@ -63,19 +68,18 @@ class PecaController extends Controller
                 $path = $request->file('img')->storeAs('public/img', $fileNameToStore);
             } else {
                 $fileNameToStore = 'noimage.jpg';
-            }*/
+            }
 
             
             $peca = new Peca;
             $peca->nome = $request->input('nome');
             $peca->descricao = $request->input('descricao');
             $peca->peso_medio = $request->input('peso_medio');
-            $peca->estado_id = $request->input('estado_id');
-            $peca->artesao_id = $request->input('artesao_id');
-            $peca->users_id = $userId;
             $peca->valor=$request->input('valor');
-            
-           
+            $peca->img=$fileNameToStore;
+            $peca->estado_id = $request->input('estado_id');
+            $peca->users_id = $userId;
+            $peca->artesao_id = $request->input('artesao_id');
             $peca->save();
             return redirect('/home')->with('success', 'Peca Created');
             
