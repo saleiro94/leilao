@@ -17,7 +17,7 @@ class PecaController extends Controller
      */
     public function index()
     {
-        $pecas =Peca::all();
+        $pecas =Peca::orderBy('created_at','desc')->paginate(10);
         return view('pages.peca_crud.index')->with('pecas',$pecas);
       
     }
