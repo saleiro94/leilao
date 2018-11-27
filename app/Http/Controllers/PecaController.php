@@ -92,7 +92,8 @@ class PecaController extends Controller
      */
     public function show($id)
     {
-        return Peca::find($id);
+       $peca=Peca::find($id);
+       return view('pages.peca_crud.show')->with('peca',$peca);
     }
 
     /**
