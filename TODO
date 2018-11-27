@@ -5,11 +5,11 @@ Leilao
 //alt+ c para cancelar  
 Marcos:
     NavBar:
-        ☐ add Peça
+        ✔ add Peça @done(18-11-27 14:02)
     ☐ Contactos
-        ☐ conttroller
+        ✔ conttroller @done(18-11-27 14:15)
             ✔ create @done(18-11-22 11:32)
-            ☐ update
+            ✔ update @done(18-11-27 15:56)
             ☐ delete
             ☐ show 
         ☐ pagina
@@ -19,10 +19,10 @@ Marcos:
         ☐ pagina
         ☐ 
         
-    ☐ pagina listar todas as peças
-        ☐ controller
-        ☐ pagina
-        ☐ 
+    ✔ pagina listar todas as peças @done(18-11-27 15:57)
+        ✔ controller @done(18-11-27 15:57)
+        ✔ pagina @done(18-11-27 15:56)
+        ☐ alinhar butao
 Antonio:
     ☐ Adicionar peças;
         ✔ controller @done(18-11-22 11:05)
