@@ -10,14 +10,14 @@ class Peca extends Model
     use Notifiable;
 
     protected $fillable = [
-        'nome', 'descricao', 'peso_medio','valor','img','estado_id','users_id','artesao_id'
+        'nome', 'descricao', 'peso_medio','valor','img','estado_conservacaos_id','users_id','artesao_id'
     ];
     
     public function users(){
         return $this->belongsTo('App\User');
     }
-    public function estado(){
-        return $this->belongsTo('App\Estado');
+    public function estado_conservacaos(){
+        return $this->belongsTo('App\Estado_conservacao');
     }
     public function artesao(){
         return $this->belongsTo('App\Artesao');

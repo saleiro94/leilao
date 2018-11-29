@@ -14,6 +14,7 @@ class LoteController extends Controller
     public function index()
     {
         //
+
     }
 
     /**
@@ -24,6 +25,7 @@ class LoteController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
