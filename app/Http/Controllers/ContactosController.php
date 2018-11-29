@@ -54,7 +54,7 @@ class ContactosController extends Controller
         $user->contacto_id = $contacto->id;
         $user->save();
         }
-        return redirect('/home')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'Contacto Criado');
     }
 
     /**

@@ -42,7 +42,7 @@ class PecaController extends Controller
     {
         //Get user id
         $userId = Auth::id();
-        //dd($userId);
+        //dd($request);
         $this->validate($request, [
             'nome' => 'required',
             'descricao' => 'required',
@@ -80,7 +80,7 @@ class PecaController extends Controller
             $peca->users_id = $userId;
             $peca->artesao_id = $request->input('artesao_id');
             $peca->save();
-            return redirect('/home')->with('success', 'Peca Created');
+            return redirect('/novosLeiloes')->with('success', 'Peca Criada');
             
     }
 

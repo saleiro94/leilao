@@ -18,6 +18,7 @@
         @include('inc.navbar')
     
         <div class="container">
+            @include('inc.massages')
             @yield('content')
         </div>
     </div>
