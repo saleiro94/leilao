@@ -42,14 +42,14 @@ class PecaController extends Controller
     {
         //Get user id
         $userId = Auth::id();
-        //dd($userId);
+        //dd($request);
         $this->validate($request, [
             'nome' => 'required',
             'descricao' => 'required',
             'peso_medio' => 'required',
             'valor' => 'required',
             'img'=>'image|nullable|max:3000',
-            'estado_id' => 'required',            
+            'estado_conservacaos_id' => 'required',            
             'artesao_id' => 'required',
             
             ]);
@@ -76,7 +76,7 @@ class PecaController extends Controller
             $peca->peso_medio = $request->input('peso_medio');
             $peca->valor=$request->input('valor');
             $peca->img=$fileNameToStore;
-            $peca->estado_id = $request->input('estado_id');
+            $peca->estado_conservacaos_id = $request->input('estado_conservacaos_id');
             $peca->users_id = $userId;
             $peca->artesao_id = $request->input('artesao_id');
             $peca->save();

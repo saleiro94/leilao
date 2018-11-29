@@ -23,8 +23,8 @@
             {{Form::file('img')}}
         </div>
         <div class="form-group">
-            {{Form::label('estado_id', 'Estado')}}
-            {{Form::text('estado_id', '', ['class' => 'form-control', 'placeholder' => 'Estado'])}}
+            {{Form::label('estado_conservacaos_id', 'Estado')}}
+            {{Form::text('estado_conservacaos_id', '', ['class' => 'form-control', 'placeholder' => 'Estado Conservação'])}}
         </div>
         <div class="form-group">
             {{Form::label('artesao_id', 'Artesão')}}

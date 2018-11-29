@@ -21,10 +21,10 @@ class CreatePecaTable extends Migration
             $table->float('peso_medio');
             $table->integer('valor');
             $table->string('img');
-            $table->integer('estado_id')->unsigned();
+            $table->integer('estado_conservacaos_id')->unsigned();
             $table->integer('users_id')->unsigned();
             $table->integer('artesao_id')->unsigned();
-            $table->foreign('estado_id')->references('id')->on('estado');
+            $table->foreign('estado_conservacaos_id')->references('id')->on('estado_conservacaos');
             $table->foreign('users_id')->references('id')->on('users');
             $table->foreign('artesao_id')->references('id')->on('artesao');
             $table->timestamps();

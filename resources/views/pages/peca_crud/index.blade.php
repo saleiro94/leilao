@@ -18,7 +18,7 @@
                         <h5>Descrição:{{$peca->descricao}}</h5>
                         <h5>Peso médio:{{$peca->peso_medio}}</h5>
                         <h5>Valor:{{$peca->valor}}</h5>
-                        <h5>Estado:{{$peca->estado->descricao}}</h5>
+                        <h5>Estado:{{$peca->estado_conservacaos->descricao}}</h5>
                         <h5>User:{{$peca->users->name}}</h5>
                         <h5>Artesão:{{$peca->artesao->nome}}</h5>
                         <br>
