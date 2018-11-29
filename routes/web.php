@@ -18,6 +18,8 @@ Route::get('/novosLeiloes','PecaController@index');
 Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/adicionarpeca/create','PecaController@create');
+Route::get('/meusLeiloes','PecaController@mostrarMeus');
+
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
 Route::resource('/novosContactos', 'ContactosController');

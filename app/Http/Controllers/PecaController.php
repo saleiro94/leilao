@@ -21,7 +21,13 @@ class PecaController extends Controller
         return view('pages.peca_crud.index')->with('pecas',$pecas);
       
     }
-
+    public function mostrarMeus()
+    {
+        $userId = Auth::id();
+        $pecas =Peca::orderBy('created_at','desc')->where('users_id', '=', $userId)->paginate(10);
+        return view('pages.peca_crud.index')->with('pecas',$pecas);
+      
+    }
     /**
      * Show the form for creating a new resource.
      *
