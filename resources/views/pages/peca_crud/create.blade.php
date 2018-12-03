@@ -23,13 +23,24 @@
             {{Form::file('img')}}
         </div>
         <div class="form-group">
-            {{Form::label('estado_conservacaos_id', 'Estado')}}
-            {{Form::text('estado_conservacaos_id', '', ['class' => 'form-control', 'placeholder' => 'Estado Conservação'])}}
-        </div>
+            <select class="form-control m-bot15" name="estado_conservacaos_id">
+
+                @if ($estados->count())
+            
+                    @foreach($estados as $estado)
+                        <option value="{{ $estado->id }}" {{ $selectEstado == $estado->id ? 'selected="selected"' : '' }}>{{ $estado->descricao }}</option>    
+                        @endforeach
+                @endif
+            
+            </select>
+              </div>
+
         <div class="form-group">
             {{Form::label('artesao_id', 'Artesão')}}
             {{Form::text('artesao_id', '', ['class' => 'form-control', 'placeholder' => 'Artesão'])}}
         </div>
+
+        
       
         {{Form::submit('Inserir', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}

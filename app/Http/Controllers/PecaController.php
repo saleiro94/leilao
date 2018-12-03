@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Peca;
+use App\User;
+use App\Estado_conservacao;
 use DB;
 
 class PecaController extends Controller
@@ -35,7 +37,11 @@ class PecaController extends Controller
      */
     public function create()
     { 
-        return view('pages.peca_crud.create');
+        $estados = Estado_conservacao::all();
+        $selectEstado=User::first()->estado_conservacaos_id;
+
+        
+        return view('pages.peca_crud.create', compact('estados','selectEstado'));
     }
 
     /**
