@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Peca;
 use App\User;
+use App\Artesao;
 use App\Estado_conservacao;
 use DB;
 
@@ -39,9 +40,11 @@ class PecaController extends Controller
     { 
         $estados = Estado_conservacao::all();
         $selectEstado=User::first()->estado_conservacaos_id;
+        $artesaos = Artesao::all();
+        $selectArtesao=User::first()->artesao_id;
 
         
-        return view('pages.peca_crud.create', compact('estados','selectEstado'));
+        return view('pages.peca_crud.create', compact('estados','selectEstado'),compact('artesaos','selectArtesao'));
     }
 
     /**

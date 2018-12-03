@@ -38,6 +38,9 @@
                               <a class="dropdown-item" href="/adicionarpeca/create">
                                 {{ __('Adicionar Peças') }}
                              </a>
+                             <a class="dropdown-item" href="/adicionarartesao/create">
+                                {{ __('Adicionar Artesão') }}
+                             </a>
                              <a class="dropdown-item" href="/meusLeiloes">
                                 {{ __('Meus Leilões') }}
                              </a>

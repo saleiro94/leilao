@@ -23,6 +23,7 @@
             {{Form::file('img')}}
         </div>
         <div class="form-group">
+                {{Form::label('estado_conservcaos_id', 'Estado Conservação')}}
             <select class="form-control m-bot15" name="estado_conservacaos_id">
 
                 @if ($estados->count())
@@ -35,11 +36,19 @@
             </select>
               </div>
 
-        <div class="form-group">
-            {{Form::label('artesao_id', 'Artesão')}}
-            {{Form::text('artesao_id', '', ['class' => 'form-control', 'placeholder' => 'Artesão'])}}
-        </div>
-
+              <div class="form-group">
+                    {{Form::label('artesao_id', 'Artesão')}}
+                <select class="form-control m-bot15" name="artesao_id">
+    
+                    @if ($artesaos->count())
+                
+                        @foreach($artesaos as $artesao)
+                            <option value="{{ $artesao->id }}" {{ $selectArtesao == $artesao->id ? 'selected="selected"' : '' }}>{{ $artesao->nome }}</option>    
+                            @endforeach
+                    @endif
+                
+                </select>
+                  </div>
         
       
         {{Form::submit('Inserir', ['class'=>'btn btn-primary'])}}

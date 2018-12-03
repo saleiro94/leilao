@@ -11,10 +11,23 @@ class categorias extends Seeder
      */
     public function run()
     {
-        DB::table('categoria')->insert([
-            
-            'descricao' => str_random(10),
-        
+        DB::table('categoria')->insert([   
+            'descricao' => "Bonecos",
+        ]);
+        DB::table('categoria')->insert([   
+            'descricao' => "Vidros",
+        ]);
+        DB::table('categoria')->insert([   
+            'descricao' => "Madeiras",
+        ]);
+        DB::table('categoria')->insert([   
+            'descricao' => "Artesanato",
+        ]);
+        DB::table('categoria')->insert([   
+            'descricao' => "Loiça",
+        ]);
+        DB::table('categoria')->insert([   
+            'descricao' => "Ferro",
         ]);
     }
 }
