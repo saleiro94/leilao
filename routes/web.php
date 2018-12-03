@@ -20,6 +20,7 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('/adicionarpeca/create','PecaController@create');
 Route::get('/adicionarartesao/create','ArtesaoController@create');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
+Route::get('/adicionarregiao/create','RegiaoController@create');
 
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
@@ -27,4 +28,5 @@ Route::resource('/novosContactos', 'ContactosController');
 Route::resource('/adicionarpeca', 'PecaController');
 Route::resource('/adicionarartesao', 'ArtesaoController');
 Route::resource('/novosLeiloes','PecaController');
+Route::resource('/adicionarregiao','RegiaoController');
 Auth::routes();

@@ -46,11 +46,12 @@
                             <option value="{{ $artesao->id }}" {{ $selectArtesao == $artesao->id ? 'selected="selected"' : '' }}>{{ $artesao->nome }}</option>    
                             @endforeach
                     @endif
-                
                 </select>
                   </div>
-        
-      
+                  <a href="/adicionarartesao/create">
+                    {{ __('Adicionar Artesão') }}
+                 </a>
+                <br> <br>    
         {{Form::submit('Inserir', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

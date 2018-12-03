@@ -41,7 +41,10 @@
             
             </select>
          </div>
-      
+         <a href="/adicionarregiao/create">
+            {{ __('Adicionar Região') }}
+         </a> 
+         <br> <br>
         {{Form::submit('Inserir', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

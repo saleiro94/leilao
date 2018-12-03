@@ -32,14 +32,17 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/novosContactos">
+                             <a class="dropdown-item" href="/novosContactos">
                                  {{ __('Novos Contactos') }}
-                              </a>
-                              <a class="dropdown-item" href="/adicionarpeca/create">
+                             </a>
+                             <a class="dropdown-item" href="/adicionarpeca/create">
                                 {{ __('Adicionar Peças') }}
                              </a>
                              <a class="dropdown-item" href="/adicionarartesao/create">
                                 {{ __('Adicionar Artesão') }}
+                             </a>
+                             <a class="dropdown-item" href="/adicionarregiao/create">
+                                {{ __('Adicionar Região') }}
                              </a>
                              <a class="dropdown-item" href="/meusLeiloes">
                                 {{ __('Meus Leilões') }}

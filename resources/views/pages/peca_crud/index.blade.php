@@ -29,6 +29,6 @@
         @endforeach
       
     @else
-        <p>No posts found</p>
+        <p>Leilões não encontrados</p>
     @endif
 @endsection
