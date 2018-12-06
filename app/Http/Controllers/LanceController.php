@@ -1,17 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use App\Regiao;
+use App\Lance;
+use App\Peca;
 use DB;
-
-
-class RegiaoController extends Controller
+class LanceController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -19,24 +15,20 @@ class RegiaoController extends Controller
      */
     public function index()
     {
-        $regiao =Regiao::orderBy('created_at','desc')->paginate(10);
-        return view('pages.regiao_crud.create')->with('regiao',$regiao);
-      
-    }
-        /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    { 
-        return view('pages.regiao_crud.create');
+       
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function create()
+    {
+       
+
+        return view('pages.lance_crud.create');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -44,21 +36,23 @@ class RegiaoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //dd($request);
+    { 
+        dd($request);
+
+        $userId = Auth::id();
+       
         $this->validate($request, [
-            'localizacao' => 'required',
-            'codigo_postal' => 'required',
-            'descricao' => 'required',            
+            'valor' => 'required',       
             ]);
 
-            $regiao = new Regiao;
-            $regiao->localizacao = $request->input('localizacao');
-            $regiao->codigo_postal = $request->input('codigo_postal');
-            $regiao->descricao = $request->input('descricao');
-            $regiao->save();
-            return redirect('/novosLeiloes')->with('success', 'Região Criada');
-            
+        $lance = new lance;
+        $lance->valor=$request->input('valor');
+        $lance->hora=
+        $lance->data=
+        $lance->users_id = $userId;
+        $lance->peca_id =$request->input('id') ;
+        $lance->save();
+        return redirect('/novosLeiloes')->with('success', 'Peca Criada');
     }
 
     /**
@@ -69,8 +63,7 @@ class RegiaoController extends Controller
      */
     public function show($id)
     {
-       $regiao=Regiao::find($id);
-       return view('pages.regiao_crud.show')->with('regiao',$regiao);
+        //
     }
 
     /**
@@ -93,8 +86,9 @@ class RegiaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -106,4 +100,12 @@ class RegiaoController extends Controller
     {
         //
     }
+    public function mostrar($id){
+       // dd($id);
+        return view('pages.lance_crud.create',compact('id'));
+
+
+    }
+
+    
 }

@@ -6,9 +6,12 @@
         @foreach($pecas as $peca)
             <div class="well">
                 <div style="border-style:solid; border-color:Black; border-width:1px;" class="row">
-                        <div class="col-md-11 text-right">
-                                <a href="" class="btn btn-primary">Licitar</a>  
+                        
+                    
+                    <div class="col-md-11 text-right">
+                                <a href="{{ url('licitar', [$peca->id])}}" class="btn btn-primary">Licitar</a>  
                                 </div> 
+                           
                     <div class="col-md-4 col-sm-4">
                         <img style="width:90%" src="/storage/img/{{$peca->img}}">
                     </div>
