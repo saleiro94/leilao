@@ -103,8 +103,12 @@ class LanceController extends Controller
         //
     }
     public function mostrar($id){
-      // dd($id);
-        return view('pages.lance_crud.create',compact('id'));
+     
+      
+      $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor DESC')->first();
+      $valor_lance=$lance->valor;
+      //dd($valor);
+        return view('pages.lance_crud.create',compact('id'),compact('valor_lance'));
 
 
     }

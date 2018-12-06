@@ -16,7 +16,7 @@ class CreateLanceTable extends Migration
         Schema::create('lance', function (Blueprint $table) {
             
             $table->increments('id');
-            $table->integer('valor');
+            $table->integer('valor_licitacao');
             $table->string('hora');
             $table->date('data');
             

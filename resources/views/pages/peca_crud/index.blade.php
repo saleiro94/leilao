@@ -24,6 +24,9 @@
                         <h5>Estado:{{$peca->estado_conservacaos->descricao}}</h5>
                         <h5>User:{{$peca->users->name}}</h5>
                         <h5>Artesão:{{$peca->artesao->nome}}</h5>
+                        <h5>valor Licitação:{{$peca->valor_licitacao}}</h5>
+                       
+                        
                         <br>
                     </div>
             </div>

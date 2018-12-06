@@ -20,7 +20,10 @@ class PecaController extends Controller
      */
     public function index()
     {
-        $pecas =Peca::orderBy('created_at','desc')->paginate(10);
+       
+        
+        $pecas =Peca::orderBy('lance.valor_licitacao','desc')->leftJoin('lance', 'peca.id', '=', 'lance.peca_id')->paginate(10);
+        //dd($pecas);
         return view('pages.peca_crud.index')->with('pecas',$pecas);
       
     }
