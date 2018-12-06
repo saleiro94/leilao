@@ -108,11 +108,13 @@ class PecaController extends Controller
     public function show($id)
     {
        $peca=Peca::find($id);
-       return view('pages.peca_crud.show')->with('peca',$peca);
+       $user=User::find($peca->users_id);
+       //dd($user);
+       return view('pages.peca_crud.show')->with('peca',$peca)->with('user',$user);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resource. 
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

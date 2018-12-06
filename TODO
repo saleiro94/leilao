@@ -6,13 +6,10 @@ Leilao
 Marcos:
     NavBar:
         ✔ add Peça @done(18-11-27 14:02)
-    ☐ Contactos
+    ✔ Contactos @done(18-12-04 14:34)
         ✔ conttroller @done(18-11-27 14:15)
             ✔ create @done(18-11-22 11:32)
             ✔ update @done(18-11-27 15:56)
-            ☐ delete
-            ☐ show 
-        ☐ pagina
         
     ☐ pagina principal
         ☐ controller
@@ -28,7 +25,7 @@ Antonio:
         ✔ controller @done(18-11-22 11:05)
         ✔ paginas @done(18-11-26 13:24)
         ✔ regista na base de dados com imagem @done(18-11-26 13:25)
-        ☐ layout bonito
+        ✔ layout bonito @done(18-12-04 14:35)
     ☐ listar peças
         ✔ controller @done(18-11-26 13:25)
         ✔ listar todas @done(18-11-27 10:35)
@@ -36,8 +33,8 @@ Antonio:
 
     
     ☐ peça individual
-        ☐ controller
-        ☐ paginas
+        ✔ controller @done(18-12-04 14:33)
+        ✔ paginas @done(18-12-04 14:33)
         ☐ 
 
         SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`leilao`.`peca`, CONSTRAINT `peca_users_id_foreign` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)) (SQL: insert into `peca` (`nome`, `descricao`, `peso_medio`, `valor`, `img`, `estado_conservacaos_id`, `users_id`, `artesao_id`, `updated_at`, `created_at`) values
