@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Lance;
 use App\Peca;
+use DateTime;
 use DB;
 class LanceController extends Controller
 {
@@ -37,18 +38,19 @@ class LanceController extends Controller
      */
     public function store(Request $request)
     { 
-        dd($request);
+        //dd($request);
 
         $userId = Auth::id();
        
         $this->validate($request, [
             'valor' => 'required',       
             ]);
-
+        $today = new DateTime();
+        $hora=date('H:i:s');
         $lance = new lance;
         $lance->valor=$request->input('valor');
-        $lance->hora=
-        $lance->data=
+        $lance->hora=$hora;
+        $lance->data=$today;
         $lance->users_id = $userId;
         $lance->peca_id =$request->input('id') ;
         $lance->save();
@@ -101,7 +103,7 @@ class LanceController extends Controller
         //
     }
     public function mostrar($id){
-       // dd($id);
+      // dd($id);
         return view('pages.lance_crud.create',compact('id'));
 
 
