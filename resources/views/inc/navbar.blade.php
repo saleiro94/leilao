@@ -32,21 +32,21 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                             <a class="dropdown-item" href="/novosContactos">
-                                 {{ __('Novos Contactos') }}
-                             </a>
-                             <a class="dropdown-item" href="/adicionarpeca/create">
-                                {{ __('Adicionar Peças') }}
-                             </a>
-                             <a class="dropdown-item" href="/adicionarartesao/create">
-                                {{ __('Adicionar Artesão') }}
-                             </a>
-                             <a class="dropdown-item" href="/adicionarregiao/create">
-                                {{ __('Adicionar Região') }}
-                             </a>
-                             <a class="dropdown-item" href="/meusLeiloes">
+                            <a class="dropdown-item" href="/meusLeiloes">
                                 {{ __('Meus Leilões') }}
-                             </a>
+                            </a>
+                            <a class="dropdown-item" href="/novosContactos">
+                                {{ __('Adicionar Contactos') }}
+                            </a>
+                            <a class="dropdown-item" href="/adicionarpeca/create">
+                                {{ __('Adicionar Peças') }}
+                            </a>
+                            <a class="dropdown-item" href="/adicionarartesao/create">
+                                {{ __('Adicionar Artesão') }}
+                            </a>
+                            <a class="dropdown-item" href="/adicionarregiao/create">
+                                {{ __('Adicionar Região') }}
+                            </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">

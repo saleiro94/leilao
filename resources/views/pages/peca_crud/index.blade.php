@@ -1,7 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
+<br>
     <h2>Peças</h2>
+    <div class="text-right">
+    <a href="/filtrarLeiloes" class="btn btn-primary"> Filtrar </a>   
+        <!--<div class="dropdown text-rigt">
+            <button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown">Filtar
+            <ul class="dropdown-menu ">
+                <li class="dropdown-header">Preço</li>
+                <div class="checkbox">
+                        <label><input type="checkbox" value="1">Mais Barato</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="2">Mais Caro</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="3">Melhor Oferta</label>
+                      </div>
+                <li class="divider"></li>
+                <li class="dropdown-header">Estado de Conservação</li>
+            </ul>
+        </div>-->
+    </div>
+
+    <br>
     @if(count($pecas) > 0)
         @foreach($pecas as $peca)
             <div class="well">
@@ -9,6 +32,8 @@
                         
                     
                     <div class="col-md-11 text-right">
+    <br>
+
                                 <a href="{{ url('licitar', [$peca->id])}}" class="btn btn-primary">Licitar</a>  
                                 </div> 
                            
