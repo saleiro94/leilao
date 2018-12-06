@@ -31,6 +31,11 @@ class PecaController extends Controller
         return view('pages.peca_crud.index')->with('pecas',$pecas);
       
     }
+    public function filtrar()
+    {
+        return view('pages.filtrarLeiloes');
+      
+    }
     /**
      * Show the form for creating a new resource.
      *
