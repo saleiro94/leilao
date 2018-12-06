@@ -17,6 +17,7 @@ class lances extends Seeder
             'hora' => str_random(10),
             'data' => new DateTime,
             'users_id'=>1,
+            'peca_id'=>1,
         
         ]);
     }
