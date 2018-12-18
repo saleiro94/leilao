@@ -23,15 +23,14 @@ Route::get('/licitar/create/{id}','LanceController@create');
 Route::get('licitar/{id}', 'LanceController@mostrar');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');
+Route::get('/filtrarLeiloes','PecaController@filtrar');
 
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
 Route::resource('/novosContactos', 'ContactosController');
 Route::resource('/adicionarpeca', 'PecaController');
 Route::resource('/adicionarartesao', 'ArtesaoController');
-Route::resource('/novosLeiloes','PecaController');
 Route::resource('/adicionarregiao','RegiaoController');
 Route::resource('/licitar','LanceController');
-Route::get('/filtrarLeiloes','PecaController@filtrar');
 
 Auth::routes();

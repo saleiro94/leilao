@@ -30,4 +30,7 @@ class User extends Authenticatable
     public function peca(){
         return $this->hasMany('App\Peca');
     }
+    public function lance(){
+        return $this->hasMany('App\Lance');
+    }
 }

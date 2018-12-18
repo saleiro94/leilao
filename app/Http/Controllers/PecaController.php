@@ -18,21 +18,21 @@ class PecaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-       
-        
-        $pecas =Peca::orderBy('lance.valor_licitacao','desc')->leftJoin('lance', 'peca.id', '=', 'lance.peca_id')->paginate(10);
-        //dd($pecas);
+    public function index(){
+    
+       $pecas =Peca::orderBy('lance.valor_licitacao','desc')->leftJoin('lance', 'peca.id', '=', 'lance.peca_id')->paginate(10);
         return view('pages.peca_crud.index')->with('pecas',$pecas);
-      
+    //$userId = Auth::id();
+    //$pecas =Peca::orderBy('created_at','desc')->paginate(10);
+  //return view('pages.peca_crud.index')->with('pecas',$pecas);
+  
     }
     public function mostrarMeus()
     {
         $userId = Auth::id();
         $pecas =Peca::orderBy('created_at','desc')->where('users_id', '=', $userId)->paginate(10);
-        return view('pages.peca_crud.index')->with('pecas',$pecas);
-      
+      return view('pages.peca_crud.index')->with('pecas',$pecas);
+      //dd($pecas);
     }
     public function filtrar()
     {
@@ -65,7 +65,7 @@ class PecaController extends Controller
     {
         //Get user id
         $userId = Auth::id();
-        //dd($request);
+      
         $this->validate($request, [
             'nome' => 'required',
             'descricao' => 'required',
@@ -102,6 +102,7 @@ class PecaController extends Controller
             $peca->estado_conservacaos_id = $request->input('estado_conservacaos_id');
             $peca->users_id = $userId;
             $peca->artesao_id = $request->input('artesao_id');
+            //dd($peca);
             $peca->save();
             return redirect('/novosLeiloes')->with('success', 'Peca Criada');
             
