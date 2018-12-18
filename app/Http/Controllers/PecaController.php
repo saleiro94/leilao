@@ -19,9 +19,7 @@ class PecaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-       
-        
+    {        
         $pecas =Peca::orderBy('lance.valor_licitacao','desc')->leftJoin('lance', 'peca.id', '=', 'lance.peca_id')->paginate(10);
         //dd($pecas);
         return view('pages.peca_crud.index')->with('pecas',$pecas);
@@ -31,7 +29,7 @@ class PecaController extends Controller
     {
         $userId = Auth::id();
         $pecas =Peca::orderBy('created_at','desc')->where('users_id', '=', $userId)->paginate(10);
-        return view('pages.peca_crud.index')->with('pecas',$pecas);
+        return view('pages.peca_crud.mostrarMeus')->with('pecas',$pecas);
       
     }
     public function filtrar()

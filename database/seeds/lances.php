@@ -13,7 +13,7 @@ class lances extends Seeder
     {
         DB::table('lance')->insert([
             
-            'valor' => 1,
+            'valor_licitacao' => 1,
             'hora' => str_random(10),
             'data' => new DateTime,
             'users_id'=>1,
