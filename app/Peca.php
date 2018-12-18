@@ -14,12 +14,15 @@ class Peca extends Model
     ];
     
     public function users(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User'); 
     }
+
     public function estado_conservacaos(){
         return $this->belongsTo('App\Estado_conservacao');
     }
+
     public function artesao(){
         return $this->belongsTo('App\Artesao');
     }
+
 }

@@ -3,9 +3,12 @@
 @section('content')
 <br>
     <h2>Peças</h2>
+<<<<<<< HEAD
     <div class="text-right">
     <a href="/filtrarLeiloes" class="btn btn-primary"> Filtrar </a>   
     </div>
+=======
+>>>>>>> 7ff29cba14390210bb2a40926560e4a0b9f8f96b
 
     <br>
     @if(count($pecas) > 0)
@@ -16,8 +19,7 @@
                     
                     <div class="col-md-11 text-right">
     <br>
-
-                                <a href="{{ url('licitar', [$peca->id])}}" class="btn btn-primary">Licitar</a>  
+    <a href="{{ url('licitar', [$peca->id])}}" class="btn btn-primary">Licitar</a>  
                                 </div> 
                            
                     <div class="col-md-4 col-sm-4">
@@ -30,7 +32,11 @@
                         <h5>Peso médio:{{$peca->peso_medio}}</h5>
                         <h5>Valor:{{$peca->valor}}</h5>
                         <h5>Estado:{{$peca->estado_conservacaos->descricao}}</h5>
+<<<<<<< HEAD
                         <h5>User:{{$peca->users_id}}</h5>
+=======
+                        <h5>User:{{$peca->users}}</h5>
+>>>>>>> 7ff29cba14390210bb2a40926560e4a0b9f8f96b
                         <h5>Artesão:{{$peca->artesao->nome}}</h5>
                         <h5>valor Licitação:{{$peca->valor_licitacao}}</h5>
                        
