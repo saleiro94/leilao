@@ -48,7 +48,7 @@ class LanceController extends Controller
         $today = new DateTime();
         $hora=date('H:i:s');
         $lance = new lance;
-        $lance->valor=$request->input('valor');
+        $lance->valor_licitacao=$request->input('valor');
         $lance->hora=$hora;
         $lance->data=$today;
         $lance->users_id = $userId;
@@ -105,7 +105,7 @@ class LanceController extends Controller
     public function mostrar($id){
      
       
-      $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor DESC')->first();
+      $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor_licitacao DESC')->first();
       $valor_lance=$lance->valor_licitacao;
       //dd($valor);
         return view('pages.lance_crud.create',compact('id'),compact('valor_lance'));

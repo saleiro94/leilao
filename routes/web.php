@@ -14,7 +14,7 @@
 
 //Routes GET
 Route::get('/','PagesController@index');
-//Route::get('/novosLeiloes','PecaController@index');
+Route::get('/novosLeiloes','PecaController@index');
 Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/adicionarpeca/create','PecaController@create');
