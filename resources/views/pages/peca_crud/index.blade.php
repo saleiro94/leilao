@@ -30,11 +30,11 @@
                         <h5>Descrição:{{$peca->descricao}}</h5>
                         <h5>Peso médio:{{$peca->peso_medio}}</h5>
                         <h5>Valor:{{$peca->valor}}</h5>
-                        <h5>Estado:{{$peca->estado_conservacaos->descricao}}</h5>
-                        <h5>User:{{$peca->users}}</h5>
+                        <h5>Estado:{{$peca->descricao_est}}</h5>
+                        <h5>User:{{$peca->nome}}</h5>
                     
-                        <h5>User:{{$peca->users}}</h5>
-                        <h5>Artesão:{{$peca->artesao->nome}}</h5>
+                        <h5>Maior licitação feita por:{{$peca->name}}</h5>
+                        <h5>Artesão:{{$peca->nome}}</h5>
                         <h5>valor Licitação:{{$peca->valor_licitacao}}</h5>
                        
                         
