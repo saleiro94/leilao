@@ -15,7 +15,7 @@ class CreateEstadoConservacaosTable extends Migration
     {
         Schema::create('estado_conservacaos', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('descricao');
+            $table->String('descricao_est');
             $table->timestamps();
         });
     }

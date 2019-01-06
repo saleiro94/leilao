@@ -51,7 +51,7 @@ class LanceController extends Controller
         $lance->valor_licitacao=$request->input('valor');
         $lance->hora=$hora;
         $lance->data=$today;
-        $lance->users_id = $userId;
+        $lance->users_licitou = $userId;
         $lance->peca_id =$request->input('id') ;
         $lance->save();
         return redirect('/novosLeiloes')->with('success', 'Lance Criado');
@@ -107,7 +107,7 @@ class LanceController extends Controller
       
       $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor_licitacao DESC')->first();
       $valor_lance=$lance->valor_licitacao;
-      //dd($valor);
+     //dd($valor);
         return view('pages.lance_crud.create',compact('id'),compact('valor_lance'));
 
 
