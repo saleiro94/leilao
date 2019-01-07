@@ -19,7 +19,7 @@ Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/adicionarpeca/create','PecaController@create');
 Route::get('/adicionarartesao/create','ArtesaoController@create');
-//Route::get('/licitar/create/{id}','LanceController@create');
+Route::get('/licitar/create/{id}','LanceController@create');
 Route::get('licitar/{id}', 'LanceController@mostrar');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');

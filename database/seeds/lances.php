@@ -16,7 +16,7 @@ class lances extends Seeder
             'valor_licitacao' => 1,
             'hora' => str_random(10),
             'data' => new DateTime,
-            'users_licitou'=>1,
+            'users_id'=>1,
             'peca_id'=>1,
         
         ]);
