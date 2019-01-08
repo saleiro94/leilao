@@ -8,7 +8,7 @@
               
             {{Form::label('valor', 'Valor')}}
             {{Form::hidden('id',$id)}}
-            {{Form::number('valor', 'value',['min'=>$valor_lance+1,'max'=>100])}}
+            {{Form::number('valor', 'value',['min'=>$valor_lance+1,'max'=>1000000000000000000000000000000000000000000000000000000000000000000000])}}
          
          
         

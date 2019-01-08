@@ -72,10 +72,10 @@
               
                     <br>
                     <div class="checkbox">
-                    <label>Mais Recentes&nbsp;{{Form::checkbox('recente','', ['id' => 'novo']) }}</label>
+                    <label>Mais Recentes&nbsp;{{Form::checkbox('recente') }}</label>
                     </div>
                     <div class="checkbox">
-                    <label>Mais Antigos&nbsp;{{Form::checkbox('recente'), array('id'=>'novo')}}</label>
+                    <label>Mais Antigos&nbsp;{{Form::checkbox('antigo')}}</label>
                    
                     </div>
                

@@ -12,9 +12,6 @@
             <ul class="navbar-nav mr-auto">
                 <li><a class="navbar-brand" href="/novosLeiloes">Novos Leilao</a></li>
             </ul>
-            <ul class="navbar-nav mr-auto">
-                <li><a class="navbar-brand" href="/novosLeiloes">Novos Leilao</a></li>
-            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
