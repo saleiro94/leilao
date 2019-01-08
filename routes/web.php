@@ -34,7 +34,6 @@ Route::resource('/adicionarpeca', 'PecaController');
 Route::resource('/adicionarartesao', 'ArtesaoController');
 Route::resource('/adicionarregiao','RegiaoController');
 Route::resource('/licitar','LanceController');
-Route::resource('/licitar','LanceController');
 Route::resource('/filtrarLeiloes','FiltrarController');
 Auth::routes();
 

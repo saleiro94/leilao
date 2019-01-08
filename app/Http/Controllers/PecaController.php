@@ -21,23 +21,27 @@ class PecaController extends Controller
      */
     public function index(){
         //->Join('lance', 'peca.id', '=', 'lance.peca_id')->
-       $pecas =DB::table('lance')
+      
+       $peca =DB::table('lance')
        ->join('users','users.id','=','lance.users_licitou' )
-       ->Join('peca', 'lance.peca_id', '=', 'peca.id')
+       ->join('peca', 'lance.peca_id', '=', 'peca.id')
        ->join('estado_conservacaos','peca.id','=','estado_conservacaos.id' )
-      // ->orderBy('valor_licitacao','DESC')
-       
-
-       //->where('valor_licitacao','=','')
-       ->paginate(10);
-//dd($pecas);    
-       return view('pages.peca_crud.index')->with('pecas',$pecas);
+        ->orderBy('valor_licitacao','ASC') 
+        
+        ->get();
+        
+       //->paginate(10);
+       $pecas = collect($peca)->sortBy('peca_id')->reverse();
+      
+            
+       return view('pages.peca_crud.index1')->with('pecas',$pecas);
 
            //$userId = Auth::id();
     //$pecas =Peca::orderBy('created_at','desc')->paginate(10);
   //return view('pages.peca_crud.index')->with('pecas',$pecas);
   
     }
+    
     public function mostrarMeus()
     {
         $userId = Auth::id();
