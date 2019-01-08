@@ -25,8 +25,10 @@ class PecaController extends Controller
        ->join('users','users.id','=','lance.users_licitou' )
        ->Join('peca', 'lance.peca_id', '=', 'peca.id')
        ->join('estado_conservacaos','peca.id','=','estado_conservacaos.id' )
-       ->select('peca_id')
-       ->where('valor_licitacao','=','')
+      // ->orderBy('valor_licitacao','DESC')
+       
+
+       //->where('valor_licitacao','=','')
        ->paginate(10);
 //dd($pecas);    
        return view('pages.peca_crud.index')->with('pecas',$pecas);

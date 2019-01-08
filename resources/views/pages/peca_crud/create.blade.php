@@ -29,7 +29,7 @@
                 @if ($estados->count())
             
                     @foreach($estados as $estado)
-                        <option value="{{ $estado->id }}" {{ $selectEstado == $estado->id ? 'selected="selected"' : '' }}>{{ $estado->descricao }}</option>    
+                        <option value="{{ $estado->id }}" {{ $selectEstado == $estado->id ? 'selected="selected"' : '' }}>{{ $estado->descricao_est }}</option>    
                         @endforeach
                 @endif
             
