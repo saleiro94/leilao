@@ -47,7 +47,7 @@
                             @endforeach
                     @endif
                 </select>
-                  </div>
+                  </div>    
                   <a href="/adicionarartesao/create">
                     {{ __('Adicionar Artesão') }}
                  </a>

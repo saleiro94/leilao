@@ -12,22 +12,22 @@ class estado_de_conservados extends Seeder
     public function run()
     {
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Novo",
+            'descricao_est' => "Novo",
         ]);
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Novo, sem falhas",
+            'descricao_est' => "Novo, sem falhas",
         ]);
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Novo,com falhas",
+            'descricao_est' => "Novo,com falhas",
         ]);
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Usado, sem falhas",
+            'descricao_est' => "Usado, sem falhas",
         ]);
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Usado, com ligeiras falhas",
+            'descricao_est' => "Usado, com ligeiras falhas",
         ]);
         DB::table('estado_conservacaos')->insert([
-            'descricao' => "Usado, com debilidades",
+            'descricao_est' => "Usado, com debilidades",
         ]);
     }
 }

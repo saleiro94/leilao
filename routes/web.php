@@ -19,11 +19,10 @@ Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/adicionarpeca/create','PecaController@create');
 Route::get('/adicionarartesao/create','ArtesaoController@create');
-//Route::get('/licitar/create/{id}','LanceController@create');
+Route::get('/licitar/create/{id}','LanceController@create');
 Route::get('licitar/{id}', 'LanceController@mostrar');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');
-Route::get('/filtrarLeiloes','PecaController@filtrar');
 
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
@@ -32,5 +31,8 @@ Route::resource('/adicionarpeca', 'PecaController');
 Route::resource('/adicionarartesao', 'ArtesaoController');
 Route::resource('/adicionarregiao','RegiaoController');
 Route::resource('/licitar','LanceController');
-
+Route::resource('/licitar','LanceController');
+Route::resource('/filtrarLeiloes','FiltrarController');
 Auth::routes();
+
+Route::post('/filtrarLeiloes','FiltrarController@filtrar');
