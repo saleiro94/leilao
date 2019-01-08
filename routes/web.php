@@ -13,7 +13,7 @@
 
 
 //Routes GET
-Route::get('/','PagesController@index');
+//Route::get('/','PagesController@index');
 Route::get('/novosLeiloes','PecaController@index');
 Route::get('/novosContactos','PagesController@novosContactos');
 Route::get('/dashboard', 'DashboardController@index');
@@ -23,7 +23,8 @@ Route::get('/licitar/create/{id}','LanceController@create');
 Route::get('licitar/{id}', 'LanceController@mostrar');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');
-route::get('novosLeiloes/{id}','PecaController@show');
+Route::get('novosLeiloes/{id}','PecaController@show');
+Route::get('/','PecaController@mostrar');
 
 
 

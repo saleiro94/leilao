@@ -45,6 +45,13 @@ class PecaController extends Controller
       return view('pages.peca_crud.index')->with('pecas',$pecas);
       //dd($pecas);
     }
+    public function mostrar()
+    {
+        $pecas =Peca::orderBy('created_at','desc')->paginate(10);
+      return view('pages.peca_crud.index')->with('pecas',$pecas);
+      //dd($pecas);
+    }
+    
     
     /**
      * Show the form for creating a new resource.
