@@ -23,6 +23,8 @@ Route::get('/licitar/create/{id}','LanceController@create');
 Route::get('licitar/{id}', 'LanceController@mostrar');
 Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');
+route::get('novosLeiloes/{id}','PecaController@show');
+
 
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
