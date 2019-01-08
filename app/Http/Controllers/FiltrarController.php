@@ -136,7 +136,7 @@ class FiltrarController extends Controller
         }
         if($antigo==1){
             $pecas =Peca::orderBy('created_at','asc')->paginate(10);
-        }
+        }   
         if($menor50==1){
             $pecas =Peca::orderBy('created_at','asc')->where('valor', '<', '50')->paginate(10);
         }        
