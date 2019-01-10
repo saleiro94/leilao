@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: #045FB4;">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" style="color: white " href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -10,7 +10,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li><a class="navbar-brand" href="/novosLeiloes">Novos Leilao</a></li>
+                <li><a class="navbar-brand" style="color: white" href="/novosLeiloes">Novos Leilao</a></li>
+                <li><a class="navbar-brand" style="color: white" href="/vencedores">Leilões Termiados</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -18,16 +19,16 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" style="color: white" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     <li class="nav-item">
                         @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" style="color: white" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     </li>
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle " style="color: white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
@@ -44,10 +45,10 @@
                             <a class="dropdown-item" href="/adicionarartesao/create">
                                 {{ __('Adicionar Artesão') }}
                             </a>
-                            <a class="dropdown-item" href="/adicionarregiao/create">
+                            <a class="dropdown-item"  href="/adicionarregiao/create">
                                 {{ __('Adicionar Região') }}
                             </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a class="dropdown-item"  href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">
                              {{ __('Logout') }}

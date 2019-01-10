@@ -10,6 +10,7 @@ use App\User;
 use App\Artesao;
 use App\Estado_conservacao;
 use App\Lance;
+use Carbon\Carbon;
 use DB;
 
 class PecaController extends Controller
@@ -41,19 +42,45 @@ class PecaController extends Controller
   //return view('pages.peca_crud.index')->with('pecas',$pecas);
   
     }
+
+    public function vencedores(){
+        //->Join('lance', 'peca.id', '=', 'lance.peca_id')->
+        $expired_at=Carbon::now()->addDays(2);
+      
+       $peca =DB::table('lance')
+       ->join('users','users.id','=','lance.users_licitou' )
+       ->join('peca', 'lance.peca_id', '=', 'peca.id')
+       ->join('estado_conservacaos','peca.id','=','estado_conservacaos.id' )
+        ->orderBy('valor_licitacao','ASC') 
+        ->where('peca.created_at','<',$expired_at)
+        ->get();
+       //->paginate(10);
+       //dd($peca);
+       $pecas = collect($peca)->sortBy('peca_id')->reverse();
+      
+            
+       return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', true)->with('titulo', 'Leilões Terminados');
+
+           //$userId = Auth::id();
+    //$pecas =Peca::orderBy('created_at','desc')->paginate(10);
+  //return view('pages.peca_crud.index')->with('pecas',$pecas);
+  
+    }
     
     public function mostrarMeus()
     {
         $userId = Auth::id();
         $pecas =Peca::orderBy('created_at','desc')->where('users_id', '=', $userId)->paginate(10);
-      return view('pages.peca_crud.index')->with('pecas',$pecas);
+      return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Meus Leilões');
       //dd($pecas);
     }
+
     public function mostrar()
     {
         $pecas =Peca::orderBy('created_at','desc')->paginate(10);
-      return view('pages.peca_crud.index')->with('pecas',$pecas);
-      //dd($pecas);
+    //dd($pecas);
+      
+        return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Todos os Artigos');;
     }
     
     

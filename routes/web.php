@@ -25,7 +25,7 @@ Route::get('/meusLeiloes','PecaController@mostrarMeus');
 Route::get('/adicionarregiao/create','RegiaoController@create');
 Route::get('novosLeiloes/{id}','PecaController@show');
 Route::get('/','PecaController@mostrar');
-
+Route::get('/vencedores','PecaController@vencedores');
 
 
 //Routes para resources, CRUD inclui GET,POST,PUT,DELETE
