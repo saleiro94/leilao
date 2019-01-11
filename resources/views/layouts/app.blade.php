@@ -35,7 +35,9 @@
         
         <div class="container" style="background-color: #D1EBFF; border:0.5px solid grey;">
             @include('inc.massages')
+            <br>
             @yield('content')
+            <br>
         </div>
     </div>
     <br>

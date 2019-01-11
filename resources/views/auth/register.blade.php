@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -60,17 +61,6 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="tipo_id" id="tipo_id">
-                                    <label class="form-check-label" for="tipo_id">
-                                        {{ __('Utilizador para vendedor') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -81,6 +71,7 @@
                     </form>
                 </div>
             </div>
+            <br>
         </div>
     </div>
 </div>

@@ -14,14 +14,15 @@
         @foreach($pecas as $peca)
             <div class="well">
                 <div style="background-color:white; box-shadow: 3px 3px 10px -2px grey; border-radius: 8px; margin-left:10px; margin-right:10px;" class="row ">
-        
+        @guest
+        @else
         <div class="col-md-11 text-right">
                 <br>
                 @if ($tipo == false)
                 <a href="{{url('licitar', [$peca->id])}}" class="btn btn-primary btn-lg">Licitar</a>   
                 @endif
         </div> 
-                           
+        @endguest                   
                     <div class="col-md-4 col-sm-4">
                         <img style="width:90%" src="/storage/img/{{$peca->img}}">
                     </div>

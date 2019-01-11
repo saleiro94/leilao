@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Peca;
 class DashboardController extends Controller
 {
     /**
@@ -25,6 +25,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $pecas =Peca::orderBy('created_at','desc')->paginate(10);
+      
+        return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Todos os Artigos');
     }
 }

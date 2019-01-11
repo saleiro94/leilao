@@ -22,13 +22,13 @@ class PecaController extends Controller
      */
     public function index(){
         //->Join('lance', 'peca.id', '=', 'lance.peca_id')->
-      
+        $expired_at=Carbon::now()->subDays(2);
        $peca =DB::table('lance')
        ->join('users','users.id','=','lance.users_licitou' )
        ->join('peca', 'lance.peca_id', '=', 'peca.id')
        ->join('estado_conservacaos','peca.id','=','estado_conservacaos.id' )
         ->orderBy('valor_licitacao','ASC') 
-        
+        ->where('peca.created_at','>',$expired_at)        
         ->get();
         
        //->paginate(10);
@@ -45,7 +45,7 @@ class PecaController extends Controller
 
     public function vencedores(){
         //->Join('lance', 'peca.id', '=', 'lance.peca_id')->
-        $expired_at=Carbon::now()->addDays(2);
+        $expired_at=Carbon::now()->subDays(2);
       
        $peca =DB::table('lance')
        ->join('users','users.id','=','lance.users_licitou' )
@@ -77,10 +77,12 @@ class PecaController extends Controller
 
     public function mostrar()
     {
-        $pecas =Peca::orderBy('created_at','desc')->paginate(10);
-    //dd($pecas);
+        $expired_at=Carbon::now()->subDays(2);
+        $pecas =Peca::orderBy('created_at','desc')
+        ->where('peca.created_at','>',$expired_at)
+        ->get();
       
-        return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Todos os Artigos');;
+        return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Todos os Artigos');
     }
     
     
