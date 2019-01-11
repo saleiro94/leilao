@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li><a class="navbar-brand" style="color: white" href="/novosLeiloes">Novos Leilao</a></li>
+                <li><a class="navbar-brand" style="color: white" href="/novosLeiloes">Leilões Activos</a></li>
                 <li><a class="navbar-brand" style="color: white" href="/vencedores">Leilões Termiados</a></li>
             </ul>
 

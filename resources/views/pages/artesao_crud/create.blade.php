@@ -12,8 +12,8 @@
                 {{Form::text('idade', '', ['class' => 'form-control', 'placeholder' => 'Idade'])}}
             </div>
         <div class="form-group">
-            {{Form::label('email', 'Email')}}
-            {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}
+            {{Form::label('email', 'E-mail')}}
+            {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'E-mail'])}}
         </div>
         <div class="form-group">
                 {{Form::label('catregoria_id', 'Categoria')}}

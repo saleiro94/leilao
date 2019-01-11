@@ -54,7 +54,7 @@ class LanceController extends Controller
         $lance->users_licitou = $userId;
         $lance->peca_id =$request->input('id') ;
         $lance->save();
-        return redirect('/novosLeiloes')->with('success', 'Lance Criado');
+        return redirect('/novosLeiloes')->with('success', 'Lance Criado se valor introduzido for maior que a licitação anterior');
     }
 
     /**
@@ -105,10 +105,10 @@ class LanceController extends Controller
     public function mostrar($id){
       $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor_licitacao DESC')->first();
      if($lance!=null){
-      $valor_lance=$lance->valor_licitacao;
+      $valor_licitacao=$lance->valor_licitacao;
      }
      //dd($valor);
-        return view('pages.lance_crud.create',compact('id'))->with('valor_lance');
+        return view('pages.lance_crud.create',compact('id'))->with('valor_licitacao');
     }
 
     
