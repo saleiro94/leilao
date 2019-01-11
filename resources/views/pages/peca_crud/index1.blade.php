@@ -35,7 +35,6 @@
                         <h5><strong>Peso médio: </strong>{{$peca->peso_medio}}</h5>
                         <h5><strong>Valor: </strong>{{$peca->valor}}</h5>
                         <h5><strong>Estado: </strong>{{$peca->descricao_est}}</h5>
-                        <h5><strong>Artesão: </strong>{{$peca->nome}}</h5>
                         <h5><strong>Valor Licitação: </strong>{{$peca->valor_licitacao}}</h5>
                        
                         

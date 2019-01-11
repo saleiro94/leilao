@@ -35,8 +35,6 @@
                         @if ($tipo == false)
                         <h5><strong>Estado:</strong> {{$peca->estado_conservacaos->descricao_est}}</h5>
                         @endif
-                        <h5><strong>User:</strong> {{$peca->users->name}}</h5>
-                        <h5><strong>Artesão:</strong> {{$peca->artesao->nome}}</h5>
                         <br>
                     </div>
             </div>

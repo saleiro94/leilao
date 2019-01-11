@@ -59,7 +59,7 @@ class PecaController extends Controller
        $pecas = collect($peca)->sortBy('peca_id')->reverse();
       
             
-       return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', true)->with('titulo', 'Leilões Terminados');
+       return view('pages.peca_crud.index2')->with('pecas',$pecas)->with('tipo', true)->with('titulo', 'Leilões Terminados');
 
            //$userId = Auth::id();
     //$pecas =Peca::orderBy('created_at','desc')->paginate(10);
