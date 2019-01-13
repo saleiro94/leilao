@@ -132,37 +132,37 @@ class FiltrarController extends Controller
         }
 
         if($recente==1){
-            $pecas =Peca::orderBy('created_at','desc')->paginate(10);
+            $pecas =Peca::orderBy('created_at','desc')->get();
         }
         if($antigo==1){
-            $pecas =Peca::orderBy('created_at','asc')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->get();
         }   
         if($menor50==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('valor', '<', '50')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('valor', '<', '50')->get();
         }        
         if($menor100==1){
-            $pecas =Peca::orderBy('created_at','desc')->where('valor', '>=', '50')->where('valor', '<=', '100')->paginate(10);
+            $pecas =Peca::orderBy('created_at','desc')->where('valor', '>=', '50')->where('valor', '<=', '100')->get();
         }
         if($maior100==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('valor', '>', '100')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('valor', '>', '100')->get();
         }
         if($novo==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '1')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '1')->get();
         }
         if($novoSem==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '2')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '2')->get();
         }
         if($novoCom==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '3')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '3')->get();
         }
         if($usadoSem==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '4')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '4')->get();
         }        
         if($usadoCom==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '5')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '5')->get();
         }
         if($usado==1){
-            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '6')->paginate(10);
+            $pecas =Peca::orderBy('created_at','asc')->where('estado_conservacaos_id', '6')->get();
         }
         return view('pages.peca_crud.index')->with('pecas',$pecas);
     }

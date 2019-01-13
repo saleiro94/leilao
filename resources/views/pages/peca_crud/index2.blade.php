@@ -13,7 +13,7 @@
     @if(count($pecas) > 0)
         @foreach($pecas as $peca)
             <div class="well">
-                <div style="background-color:white; box-shadow: 3px 3px 10px -2px grey; border-radius: 8px; margin-left:10px; margin-right:10px;" class="row ">
+    <div style="background-color:white; box-shadow: 3px 3px 10px -2px grey; border-radius: 8px; margin-left:10px; margin-right:10px;" class="row ">
         @guest
         @else
         <div class="col-md-11 text-right">
@@ -28,18 +28,22 @@
                     </div>
                     
                     <div class="col-md-8 col-sm-8 ">
-                        <h3><a href="/novosLeiloes/{{$peca->id}}"><u>{{$peca->nome}}</u></a></h3><br>
+            <br>
+                        <h3><a href="/novosLeiloes/{{$peca->id}}"><u>{{$peca->nome}}</u></a></h3>
+                        
                         <h5><strong>Descrição:</strong> {{$peca->descricao}}</h5>
                         <h5><strong>Peso médio:</strong> {{$peca->peso_medio}}</h5>
                         <h5><strong>Valor:</strong> {{$peca->valor}}</h5>
                         @if ($tipo == false)
                         <h5><strong>Estado:</strong> {{$peca->estado_conservacaos->descricao_est}}</h5>
                         @endif
-                        <br>
+                            
                     </div>
+                    
             </div>
+            
             </div>
-    <br>
+            <br>
         @endforeach
       
     @else

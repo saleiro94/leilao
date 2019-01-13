@@ -2,7 +2,7 @@
 
 @section('content')
 <br>
-    <h2><strong>{{$titulo}}</strong></h2>
+    <h2><strong>Meus Leilões</strong></h2>
 
     <div class="text-right">
     <a href="/filtrarLeiloes" class="btn btn-primary"> Filtrar </a>   
@@ -32,9 +32,7 @@
                         <h5><strong>Descrição:</strong> {{$peca->descricao}}</h5>
                         <h5><strong>Peso médio:</strong> {{$peca->peso_medio}}</h5>
                         <h5><strong>Valor:</strong> {{$peca->valor}}</h5>
-                        @if ($tipo == false)
                         <h5><strong>Estado:</strong> {{$peca->estado_conservacaos->descricao_est}}</h5>
-                        @endif
                         <h5><strong>User:</strong> {{$peca->users->name}}</h5>
                         <h5><strong>Artesão:</strong> {{$peca->artesao->nome}}</h5>
                         <br>

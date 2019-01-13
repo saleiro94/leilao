@@ -71,7 +71,7 @@ class PecaController extends Controller
     {
         $userId = Auth::id();
         $pecas =Peca::orderBy('created_at','desc')->where('users_id', '=', $userId)->paginate(10);
-      return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false)->with('titulo', 'Meus Leilões');
+      return view('pages.peca_crud.index')->with('pecas',$pecas)->with('tipo', false);
       //dd($pecas);
     }
 
