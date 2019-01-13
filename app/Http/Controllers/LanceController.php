@@ -107,8 +107,11 @@ class LanceController extends Controller
       $lance = DB::table('lance')->where('peca_id', $id)->orderByRaw('valor_licitacao DESC')->first();
      if($lance!=null){
       $valor_licitacao=$lance->valor_licitacao;
+     }else{
+         $peca= DB::table('peca')->where('id',$id)->orderByRaw('valor DESC')->first();
+        $valor_licitacao=$peca->valor;
      }
-    //dd($valor_licitacao);
+  //dd($valor_licitacao);
         return view('pages.lance_crud.create',compact('id'))->with('valor_licitacao',$valor_licitacao);
     }
 
