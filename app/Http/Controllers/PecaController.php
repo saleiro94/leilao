@@ -151,7 +151,7 @@ class PecaController extends Controller
             $peca->artesao_id = $request->input('artesao_id');
             //dd($peca);
             $peca->save();
-            return redirect('/novosLeiloes')->with('success', 'Peca Criada');
+            return redirect('/')->with('success', 'Peca Criada');
             
     }
 

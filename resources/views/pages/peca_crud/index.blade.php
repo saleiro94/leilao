@@ -2,7 +2,7 @@
 
 @section('content')
 <br>
-    <h2><strong>Meus Leilões</strong></h2>
+    <h2><strong>Lelões  Disponiveis</strong></h2>
 
     <div class="text-right">
     <a href="/filtrarLeiloes" class="btn btn-primary"> Filtrar </a>   
@@ -18,9 +18,9 @@
         @else
         <div class="col-md-11 text-right">
                 <br>
-                @if ($tipo == false)
+               
                 <a href="{{url('licitar', [$peca->id])}}" class="btn btn-primary btn-lg">Licitar</a>   
-                @endif
+                
         </div> 
         @endguest                   
                     <div class="col-md-4 col-sm-4">
